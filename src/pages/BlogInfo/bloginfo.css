@@ -1,0 +1,44 @@
+
+    .div1{
+      background-color: #c907ff;
+      margin-top: 11111px;
+      margin-bottom: 80px;
+  }
+ 
+  .img1{
+    margin-right: 1000px;
+    margin-top: 200px;
+  }
+  .second{
+      background-color: #e062e9;
+      padding: 60px;
+    color: rgb(0, 1, 1);  
+      background-color: #3e3e3e;
+      padding-right: -430px;
+      height: 300px;
+      margin: auto;
+     border: 1px solid grey;
+  margin-right: 40px;
+  
+      border:"20px solid" ;
+      width: 90%;
+      
+  }
+  .para{
+      margin-top: 200px;
+  }
+  .div-img  {
+      color: azure;
+      padding-bottom: 30px;
+      background-color: #993cdb;
+      border-radius: 5px;
+  
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+  
+  }
+  .links svg{
+      margin-left: 20px;
+  }

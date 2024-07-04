@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  .containers {
+    display: flex;
+    height: 120vh;
+  }
+  
+  /* .sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+   */
+  .sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-item, .sidebar-subitem {
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+  }
+  
+  .sidebar-subitem {
+    font-size: 14px;
+    color: #6c757d;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .sidebar-item.active {
+    color: #6c63ff;
+  }
+  
+  .sidebar-item i, .sidebar-subitem i {
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #dee1e4;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 95%;
+    height: 50px;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 92%;
+    top: 16%;
+    transform: translateY(-50%);
+    color: #0a0a0a;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .main-title {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .post-table {
+    background-color: white;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    height: 70%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .status.active {
+    background-color: #6c63ff;
+  }
+  
+  .status.pending {
+    background-color: #f9c74f;
+  }
+  
+  .post-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .btn-edit {
+    color: #6c63ff;
+  }
+  
+  .btn-delete {
+    color: #f44336;
+  }
+  
+  .btn-accept, .btn-reject {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-accept {
+    background-color: #28a745;
+    color: white;
+    margin-right: 5px;
+  }
+  
+  .btn-reject {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  
