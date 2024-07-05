@@ -9,13 +9,50 @@ import { GoPeople } from "react-icons/go";
 import { CiVideoOn } from "react-icons/ci";
 import Accordion from 'react-bootstrap/Accordion';
 import '../InfoCourses/Infocourses.css';
-
+import { useState } from 'react';
 import { FaArrowRight } from "react-icons/fa6";
 
 import { BsFillBagFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const InfoCourses = () => {
+  const [questions, setQuestions] = useState([]);
+  const [newQuestion, setNewQuestion] = useState('');
+
+  const [replyIndex, setReplyIndex] = useState(null);
+  const [replyText, setReplyText] = useState('');
+
+  const handleQuestionSubmit = () => {
+    if (newQuestion.trim()) {
+      setQuestions([...questions, { question: newQuestion, answer: 'To play the guitar, first get in position. Rest the guitar on your right leg. Then, place your right hand over the strings with your elbow out to the side.' }]);
+      setNewQuestion('');
+    }
+  };
+
+
+  const handleQuestionChange = (event) => {
+    setNewQuestion(event.target.value);
+  };
+
+ 
+
+  const handleReplyClick = (index) => {
+    setReplyIndex(index);
+    setReplyText('');
+  };
+
+  const handleReplyChange = (event) => {
+    setReplyText(event.target.value);
+  };
+
+  const handleReplySubmit = (index) => {
+    const updatedQuestions = questions.map((qa, i) => 
+      i === index ? { ...qa, answer: replyText } : qa
+    );
+    setQuestions(updatedQuestions);
+    setReplyIndex(null);
+    setReplyText('');
+  };
   const lectures = [
     { title: 'Rock The Street', duration: '21:08' },
     { title: 'Is an Online Financial Advisor Right for You?', duration: '12:21' },
@@ -182,7 +219,7 @@ const InfoCourses = () => {
                 No Review Yet
               </div>
 
-              <h3 htmlFor="w3review" style={{
+              {/* <h3 htmlFor="w3review" style={{
                 fontSize: "20px",
                 fontFamily: "fantasy",
                 color: "black",
@@ -205,7 +242,43 @@ const InfoCourses = () => {
                 <span className="btn_text">
                   Ask Question
                 </span>
-              </div>
+              </div> */}
+              <h3 htmlFor="w3review" style={{
+        fontSize: "20px",
+        fontFamily: "fantasy",
+        color: "black",
+        fontWeight: "bold",
+        marginTop: "20px"
+      }}>
+        Question & Answer
+      </h3>
+
+      <textarea
+        id="w3review"
+        name="w3review"
+        rows="3"
+        cols="90"
+        value={newQuestion}
+        onChange={handleQuestionChange}
+        placeholder="Do you have any questions?"
+        style={{ paddingTop: "10px", paddingLeft: "20px" }}
+      />
+
+      <div className='hoveru' style={{ marginTop: "20px" }}>
+        <span className="btn_text" onClick={handleQuestionSubmit}>
+          Ask Question
+        </span>
+      </div>
+
+      <div style={{ marginTop: "20px" }}>
+        {questions.map((qa, index) => (
+          <div key={index} style={{ marginBottom: "20px" }}>
+            <strong>Q:</strong> {qa.question}
+            <br />
+            <strong>A:</strong> {qa.answer}
+          </div>
+        ))}
+      </div>
 
               <div className="tutor-qna-chat tutor-qna-left" style={{ marginTop: "120px" }}>
                 <div className='d-flex flex-row justify-content-start' style={{ width: "20px" }}>
@@ -241,33 +314,98 @@ const InfoCourses = () => {
 
                 <div className="tutor-toggle-reply mt-5" style={{ textAlign: "right" }}>
                   <span>
-                    <a href="#" style={{ textDecoration: "none", color: "blue" }}>
+                    <a style={{ textDecoration: "none", color: "blue" }} onClick={handleQuestionSubmit}>
                       Reply
                     </a>
                   </span>
                 </div>
+                <h3 htmlFor="w3review" style={{
+        fontSize: "20px",
+        fontFamily: "fantasy",
+        color: "black",
+        fontWeight: "bold",
+        marginTop: "20px"
+      }}>
+        Question & Answer
+      </h3>
+
+      <textarea
+        id="w3review"
+        name="w3review"
+        rows="3"
+        cols="90"
+        value={newQuestion}
+        onChange={handleQuestionChange}
+        placeholder="Do you have any questions?"
+        style={{ paddingTop: "10px", paddingLeft: "20px" }}
+      />
+
+      <div className='hoveru' style={{ marginTop: "20px" }}>
+        <span className="btn_text" onClick={handleQuestionSubmit}>
+          Ask Question
+        </span>
+      </div>
+
+                <div style={{ marginTop: "20px" }}>
+        {questions.map((qa, index) => (
+          <div key={index} style={{ marginBottom: "20px" }}>
+            <strong>Q:</strong> {qa.question}
+            <br />
+            {qa.answer ? (
+              <>
+                <strong>A:</strong> {qa.answer}
+              </>
+            ) : (
+              <div className="tutor-toggle-reply mt-5" style={{ textAlign: "right" }}>
+                <span>
+                  <a style={{ textDecoration: "none", color: "blue" }} onClick={() => handleReplyClick(index)}>
+                    Reply
+                  </a>
+                </span>
+              </div>
+            )}
+            {replyIndex === index && (
+              <div style={{ marginTop: "10px" }}>
+                <textarea
+                  rows="3"
+                  cols="70"
+                  value={replyText}
+                  onChange={handleReplyChange}
+                  placeholder="Write your reply here"
+                  style={{ paddingTop: "10px", paddingLeft: "20px" }}
+                />
+                <div className='hoveru' style={{ marginTop: "10px" }}>
+                  <span className="btn_text" onClick={() => handleReplySubmit(index)}>
+                    Submit Reply
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
               </div>
 
               <div className="tutor-qna-chat tutor-qna-left" style={{ marginTop: "120px" }}>
                 <div className='d-flex flex-row justify-content-start' style={{ width: "20px" }}>
                   <div style={{ width: "30%" }}>
-                    <img
+                    {/* <img
                       src="https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-45-1.jpg"
                       style={{ borderRadius: "50%", height: "60px", width: "60px" }}
                       alt="User"
-                    />
+                    /> */}
                   </div>
 
                   <div>
-                    <div className="tutor-fs-6 tutor-fw-medium tutor-color-secondary" style={{ width: "12em", marginLeft: "80px" }}>
+                    {/* <div className="tutor-fs-6 tutor-fw-medium tutor-color-secondary" style={{ width: "12em", marginLeft: "80px" }}>
                       Jhon Sina
-                    </div>
-                    <div className="tutor-fs-7 tutor-color-muted" style={{ width: "12em", marginLeft: "80px" }}>
+                    </div> */}
+                    {/* <div className="tutor-fs-7 tutor-color-muted" style={{ width: "12em", marginLeft: "80px" }}>
                       2 months ago
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-
+{/* 
                 <div className="tutor-qna-text tutor-fs-7" style={{
                   backgroundColor: "#bfc7dd",
                   width: "30em",
@@ -278,15 +416,15 @@ const InfoCourses = () => {
                   How to play the Guitar
                   <br />
                   Course: Speaking Korean for Beginners
-                </div>
+                </div> */}
 
-                <div className="tutor-toggle-reply mt-5" style={{ textAlign: "right" }}>
+                {/* <div className="tutor-toggle-reply mt-5" style={{ textAlign: "right" }}>
                   <span>
                     <a href="#" style={{ textDecoration: "none", color: "blue" }}>
                       Reply
                     </a>
                   </span>
-                </div>
+                </div> */}
               </div>
 
               <div>
@@ -507,7 +645,7 @@ More Courses by studyhub-admin
             </section>
             <section className="card-price">
               <div className="price">
-                <del>5.00 </del> Free
+                <del>4.00 </del> Free
               </div>
             </section>
           </div>
@@ -515,7 +653,7 @@ More Courses by studyhub-admin
         
         <section className="card" style={{ width: "25em"  }}>
           
-           <img  src="https://studyhub.themewant.com/wp-content/uploads/2022/01/07-260x160.jpg"   className="card-img shadow-effect-hover" />
+           <img  src="https://studyhub.themewant.com/wp-content/uploads/2022/01/06-260x160.jpg"   className="card-img shadow-effect-hover" />
           
                <div className="outer-div">
              <div className="inner-div1">
@@ -558,7 +696,7 @@ More Courses by studyhub-admin
         </section>
         <section className="card" style={{ width: "25rem"  }}>
           
-           <img  src="https://studyhub.themewant.com/wp-content/uploads/2022/01/07-260x160.jpg"   className="card-img shadow-effect-hover" />
+           <img  src="https://studyhub.themewant.com/wp-content/uploads/2022/01/01-260x160.jpg"   className="card-img shadow-effect-hover" />
           
                <div className="outer-div">
              <div className="inner-div1">

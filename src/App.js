@@ -63,6 +63,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslationContext } from './Context/TranslationContext';
 
 import TranslationProvider from './Context/TranslationContext';
+import Certificate from './components/Certificate';
 function App() {
 
   
@@ -100,7 +101,7 @@ function App() {
   return (
  
     <div >
-        <Navbar expand="lg" className="position-sticky w-100" style={{ background: "transparent" ,height:"60px" }}>
+        {/* <Navbar expand="lg" className="position-sticky w-100" style={{ background: "transparent" ,height:"60px" }}>
         <Container>
         <Navbar.Brand>
         <Nav.Link href="/" className="text-uppercase" style={{fontSize:"20px", marginLeft:"-15px"}}>Think Tank</Nav.Link>
@@ -128,21 +129,87 @@ function App() {
         <Nav.Link href="/contact" className="text-uppercase">Get In Touch</Nav.Link>
         </Nav>
         <div className="d-flex align-items-center">
-        <Nav.Link href="/search" className="text-uppercase">
-          <i class="fas fa-search"></i>
-        </Nav.Link>
-        <Nav.Link href="/cart" className="text-uppercase position-relative">
-        <i className="fas fa-shopping-cart mx-2"></i>
+   
+        {/* <Nav.Link href="/cart" className="text-uppercase position-relative"> */}
+        {/* <i className="fas fa-shopping-cart mx-2"></i> */}
+           
+
+{/* <form onSubmit={handleSearch} style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
+  <input
+    type="text"
+    style={{ width: "220px", marginRight: "10px", padding: "6px", border: "1px solid #ccc", borderRadius: "4px" ,height:"40px" ,marginBottom:"20px"}}
+    placeholder={t('Search...')}
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+  />
+  <button type="submit" style={{ width: "100px", height:"40px", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" ,backgroundColor:"white",color:"black",marginBottom:"20px" }}>  <i className="fas fa-search" style={{  fontSize: "1.2em" }}></i></button>
+
+
+</form>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">
         </span>
-        </Nav.Link>
-        <Link to="/login" className="btn btn-outline-primary mx-2" style={{background:"white" ,color:"black" , height:"40px", width:"70px"}}>Login</Link>
-        <Link to="/signUp" className="btn btn-primary p-2" style={{background:"#543cdc",height:"40px", width:"80px"}}>Register</Link>
-        </div>
-        </Navbar.Collapse>
-        </Container>
-        </Navbar>
+   
+          <button onClick={() => changeLanguage(language === 'en' ? 'ar' : 'en')} style={{borderRadius:"50%", display:"inline-block",width:"80px" ,height:"10" ,backgroundColor:"white" ,color:"black"}}>
+        {language === 'en' ? 'ع' : 'EN'}
+        <AiOutlineTranslation />
+      </button>
+     
+        <Link to="/login" className="btn btn-outline-primary mx-3" style={{background:"white" ,color:"black" , height:"40px", width:"90px"}}>Login</Link>
+        <Link to="/signUp" className="btn btn-primary p-2 " style={{background:"#543cdc",height:"40px", width:"100px"}}>Register</Link>
+        </div> */}
 
+         {/* </Navbar.Collapse> */}
+   
+
+        <Navbar expand="lg" className="position-sticky w-100" style={{ background: "transparent", height: "60px" }}>
+        <Container>
+          <Navbar.Brand>
+            <Nav.Link href="/" className="text-uppercase" style={{ fontSize: "20px", marginLeft: "-15px" }}>{t('Think Tank')}</Nav.Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto justify-content-center w-100">
+              <Nav.Link href="/" className="text-uppercase">{t('Home')}</Nav.Link>
+              <Nav.Link href="/about" className="text-uppercase">{t('About us')}</Nav.Link>
+              <Nav.Link href="/post" className="text-uppercase">{t('Posts')}</Nav.Link>
+              <Nav className="ml-auto">
+                <Dropdown>
+                  <Dropdown.Toggle id="dropdown-basic" as="a" className="dropdown-toggle text-uppercase">
+                    {t('Pages')}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="/courses" className="text-uppercase">{t('Courses')}</Dropdown.Item>
+                    <Dropdown.Item href="/dash" className="text-uppercase">{t('Dashboard')}</Dropdown.Item>
+                    <Dropdown.Item href="/blog" className="text-uppercase">{t('Blog')}</Dropdown.Item>
+                    <Dropdown.Item href="/instructors" className="text-uppercase">{t('Instructors')}</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Nav>
+              <Nav.Link href="/contact" className="text-uppercase">{t('Get In Touch')}</Nav.Link>
+            </Nav>
+            <div className="d-flex align-items-center">
+              <form onSubmit={handleSearch} style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
+                <input
+                  type="text"
+                  style={{ width: "220px", marginRight: "10px", padding: "6px", border: "1px solid #ccc", borderRadius: "4px", height: "40px", marginBottom: "20px" }}
+                  placeholder={t('Search...')}
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+                <button type="submit" style={{ width: "100px", height: "40px", color: "white", border: "none", borderRadius: "4px", cursor: "pointer", backgroundColor: "white", color: "black", marginBottom: "20px" }}>
+                  <i className="fas fa-search" style={{ fontSize: "1.2em" }}></i>
+                </button>
+              </form>
+              <button onClick={() => changeLanguage(language === 'en' ? 'ar' : 'en')} style={{ borderRadius: "50%", display: "inline-block", width: "80px", height: "40px", backgroundColor: "white", color: "black", marginLeft: "10px" }}>
+                {language === 'en' ? 'ع' : 'EN'}
+                <AiOutlineTranslation />
+              </button>
+              <Link to="/login" className="btn btn-outline-primary mx-3" style={{ background: "white", color: "black", height: "40px", width: "90px" }}>{t('Login')}</Link>
+              <Link to="/signUp" className="btn btn-primary p-2" style={{ background: "#543cdc", height: "40px", width: "100px" }}>{t('Register')}</Link>
+            </div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
         <TranslationProvider>
   <Routes>
@@ -174,6 +241,7 @@ function App() {
   <Route path='/ML' element={<Moadmap/>} />
   <Route path='/fl' element={<Flutter/>} />
   <Route path='/nt' element={<Network/>} />
+  <Route path='/c' element={<Certificate/>} />
   </Routes>
         </TranslationProvider>
 
@@ -190,7 +258,7 @@ function App() {
 
 
 {/* Footer */}
-        <footer className="footer" style={{ borderTop: "1px solid #EAEAEA" }} >
+<footer className="footer" style={{ borderTop: "1px solid #EAEAEA" }} >
   <div className="container" >
     <div className="row">
       <div className="col-lg-3 col-md-6 mb-4 mb-md-0">

@@ -5,6 +5,8 @@
       import women from '../../utils/images/women.png';
       import FaqAccordion from '../../component/FaqAccordion/FaqAccordion';
       import { Card } from 'react-bootstrap';
+      import blogheader from '../../utils/images/blogheader.png';
+
       import Blog1Img from '../../utils/images/blog1-img.jpg';
       import flower from '../../utils/images/flower.jpg';
       import Blog2Img from '../../utils/images/blog2-img.jpg';
@@ -20,9 +22,14 @@
       import { faUserGraduate, faLanguage, faChalkboardTeacher, faGlobe, faBuilding } from '@fortawesome/free-solid-svg-icons';
       import CountUp from 'react-countup';
       import { motion } from 'framer-motion';
+      import Icon from '@mdi/react';
+import { mdiProjectorScreen } from '@mdi/js';
 import { faEye , faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import Pricing from '../Pircing/Pricing';
+import { mdiSync } from '@mdi/js'; // Sync icon from Material Design Icons
+import { mdiCodeBraces, mdiDiagram, mdiDatabase } from '@mdi/js'; // Icons from Material Design Icons
 
+import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiReact, mdiLanguagePhp, mdiNodejs } from '@mdi/js'; // Icons from Material Design Icons
 
 
       const row1 = [
@@ -44,11 +51,17 @@ import Pricing from '../Pircing/Pricing';
       ];
 
       const photos = [
-        { id: 1, title: 'Discover the benefits of functional programming  maintainability.', img: [images] },
-        { id: 2, title: 'Discover the benefits of functional programming  maintainability.', img: [images] },
-        { id: 3, title: 'Enhance your debugging skills in Python tips and essential tools.', img: [images] }
+        { id: 1, topic: "HTML", title: 'Mastering HTML: Structure and Semantics for Web Development', icon: mdiLanguageHtml5 },
+        { id: 2, topic: "CSS", title: 'Styling the Web: Advanced CSS Techniques and Best Practices', icon: mdiLanguageCss3 },
+        { id: 3, topic: "JavaScript", title: 'JavaScript Essentials: From Basics to Advanced Programming', icon: mdiLanguageJavascript },
+        { id: 4, topic: "React", title: 'Building Dynamic UIs with React: A Comprehensive Guide', icon: mdiReact },
+        { id: 5, topic: "Redux", title: 'State Management Made Easy: Mastering Redux', icon: mdiSync },
+        { id: 6, topic: "PHP", title: 'PHP for Web Development: From Fundamentals to Advanced Concepts', icon: mdiLanguagePhp },
+        { id: 7, topic: "Node.js", title: 'Server-Side JavaScript: Building Scalable Applications with Node.js', icon: mdiNodejs },
+        { id: 8, topic: "TypeScript", title: 'TypeScript in Action: Adding Types to JavaScript for Robust Applications', icon: mdiCodeBraces },
+        { id: 9, topic: "GraphQL", title: 'Querying APIs with GraphQL: A Modern Approach', icon: mdiProjectorScreen },
+        { id: 10, topic: "MongoDB", title: 'NoSQL Databases: Mastering MongoDB for Modern Applications', icon: mdiDatabase }
       ];
-
 
 
       const courses = [
@@ -76,21 +89,21 @@ import Pricing from '../Pircing/Pricing';
       const blogs = [
         {
             id: 1,
-            img: [Blog1Img],
+            img: "https://studyhub.themewant.com/wp-content/uploads/2024/05/09.jpg",
             title: 'Blog 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit?.'
+            description: 'Reham Elzero is a well-known instructor and lecturer in the field of web development and programming. '
         },
         {
             id: 2,
-            img: [Blog2Img],
+            img: "https://studyhub.themewant.com/wp-content/uploads/2024/05/07.jpg",
             title: 'Blog 2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit?.'
+  description: 'Ali is engineer builds AI models using machine learning algorithms and deep learning neural networks to draw business insights'
         },
         {
             id: 3,
-            img: [Blog3Img],
+            img: "https://studyhub.themewant.com/wp-content/uploads/2024/03/03-2.jpg",
             title: 'Blog 3',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit?.'
+            description: ' Omar is a well-known instructor and lecturer in the field of mobile development and programming. '
         }
       ];
 
@@ -127,7 +140,8 @@ import Pricing from '../Pircing/Pricing';
                 </Link>
               </div>
                 </div>
-                <div className='header-img ml-4 ' style={{  width: "50%", height: "100%" }}>
+                <div className='header-img ml-5 ' style={{  width: "50%", height: "100%" }}>
+                
                 <TrackVisibility>
                   {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
@@ -293,14 +307,19 @@ import Pricing from '../Pircing/Pricing';
             whileTap={{ scale: 0.95 }}
             
             >
-            <img src={photo.img} alt={photo.title} />
+          <Icon path={photo.icon} size={4} className="icon" />
             <div className="card-content">
             <h2>{photo.title}</h2>
             <br />
             <p>Post by : <b>admin</b></p>
-            <button className='btn-post'>
+            {/* <button className='btn-post'>
             Show <FontAwesomeIcon icon={faEye} />
-            </button>
+            </button> */}
+             <Link to='/post' className='text-decoration-none'>
+      <button style={{borderRadius:"10px 0 10px 0"}}>
+        Show <FontAwesomeIcon icon={faEye} />
+      </button>
+      </Link>
             </div>
             </motion.div>
             ))}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
+import { useTranslationContext } from '../Context/TranslationContext';
 const CommentSec = () => {
+  const {t} = useTranslation();
   const [comments, setComments] = useState([
     {
       author: 'John Doe',
@@ -85,64 +87,123 @@ const CommentSec = () => {
   };
 
   return (
+    // <div className="comment-section" style={{ margin: 'auto', width: '60%' }}>
+    //   {comments.map((comment, index) => (
+    //     <Comment key={index} comment={comment} />
+    //   ))}
+
+    //   <div className="form-container w-50" style={{ margin: 'auto', marginBottom: '100px' }}>
+        
+       
+    //       <div style={{ border: 'none' }}>
+    //         <h2 style={{ textAlign: 'center' }}>Add Comment</h2>
+    //         <p style={{ textAlign: 'center' }}>Your email address will not be published.</p>
+    //         <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+    //           <div className="form-group" style={{ width: '100%' }}>
+    //             <input
+    //               type="text"
+    //               name="author"
+    //               placeholder="Your Name"
+    //               style={{ width: '50%', display: 'inline-block', marginRight: '0px' }}
+    //               value={newComment.author}
+    //               onChange={handleInputChange}
+    //             />
+    //             <input
+    //               type="email"
+    //               name="email"
+    //               placeholder="Your Email"
+    //               style={{ width: '50%' }}
+    //               value={newComment.email}
+    //               onChange={handleInputChange}
+    //             />
+    //           </div>
+    //           <div className="form-group">
+    //             <input
+    //               type="text"
+    //               name="website"
+    //               placeholder="Website"
+    //               style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
+    //               value={newComment.website}
+    //               onChange={handleInputChange}
+    //             />
+    //           </div>
+    //           <div className="form-group">
+    //             <textarea
+    //               name="text"
+    //               placeholder="Your Message"
+    //               style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
+    //               value={newComment.text}
+    //               onChange={handleInputChange}
+    //             ></textarea>
+    //           </div>
+    //           <button type="submit" style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}>
+    //             Add Comment
+    //           </button>
+    //         </form>
+    //       </div>
+     
+    //   </div>
+    // </div>
+  
     <div className="comment-section" style={{ margin: 'auto', width: '60%' }}>
       {comments.map((comment, index) => (
         <Comment key={index} comment={comment} />
       ))}
 
       <div className="form-container w-50" style={{ margin: 'auto', marginBottom: '100px' }}>
-        
-       
-          <div style={{ border: 'none' }}>
-            <h2 style={{ textAlign: 'center' }}>Add Comment</h2>
-            <p style={{ textAlign: 'center' }}>Your email address will not be published.</p>
-            <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
-              <div className="form-group" style={{ width: '100%' }}>
-                <input
-                  type="text"
-                  name="author"
-                  placeholder="Your Name"
-                  style={{ width: '50%', display: 'inline-block', marginRight: '0px' }}
-                  value={newComment.author}
-                  onChange={handleInputChange}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  style={{ width: '50%' }}
-                  value={newComment.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="website"
-                  placeholder="Website"
-                  style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
-                  value={newComment.website}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <textarea
-                  name="text"
-                  placeholder="Your Message"
-                  style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
-                  value={newComment.text}
-                  onChange={handleInputChange}
-                ></textarea>
-              </div>
-              <button type="submit" style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}>
-                Add Comment
-              </button>
-            </form>
-          </div>
-     
+        <div style={{ border: 'none' }}>
+          <h2 style={{ textAlign: 'center' }}>{t('Add Comment')}</h2>
+          <p style={{ textAlign: 'center' }}>{t('Your email address will not be published.')}</p>
+          <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+            <div className="form-group" style={{ width: '100%' }}>
+              <input
+                type="text"
+                name="author"
+                placeholder={t('Your Name')}
+                style={{ width: '50%', display: 'inline-block', marginRight: '0px' }}
+                value={newComment.author}
+                onChange={handleInputChange}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder={t('Your Email')}
+                style={{ width: '50%' }}
+                value={newComment.email}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="website"
+                placeholder={t('Website')}
+                style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
+                value={newComment.website}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                name="text"
+                placeholder={t('Your Message')}
+                style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}
+                value={newComment.text}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <button type="submit" style={{ width: '100%', display: 'inline-block', marginTop: '20px' }}>
+              {t('Add Comment')}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
 };
+
+
+
+
 
 export default CommentSec;
