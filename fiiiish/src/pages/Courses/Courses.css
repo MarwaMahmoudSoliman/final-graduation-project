@@ -1,0 +1,183 @@
+.courses-page header {
+   background-color: blueviolet;
+    background-image:   url(https://studyhub.themewant.com/wp-content/uploads/2024/03/01-5.jpg);
+    width: 100%;
+}
+
+.courses-page .card-img-overlay {
+    background-color: rgba(5, 10, 35, 0.7);
+}
+.external-course-dev{
+    border: 1px rgb(177, 175, 175);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.outer-div {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .inner-div {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inner-div1 {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 8px; /* Adjust as needed */
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .space{
+    display: flex ;
+     align-items: center ;
+  }
+  .bg-primary {
+    background-color: #ffffff;
+    color: white;
+  }
+  
+  .inner-div span {
+    margin-left: 10px;
+  }
+.dev{
+    background-color: rgb(212, 191, 233);
+    margin-left: 1px;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 2px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.couse{
+    float:left;
+    background-color: aqua;
+    height: 100%;
+    padding-top: 25px;
+}
+.onecourse{
+margin-right: 12px;
+
+}
+
+.courses-page .card:hover {
+    cursor: pointer;
+}
+Link {
+    list-style-type: none;
+}
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  } */
+  
+  a {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .btns {
+    padding: 10px 20px;
+    margin-right: 6px;
+    background: transparent;
+    border: none;
+    border: 0.6px solid #ccc;
+    border-radius: 5px;
+    color: #323232;
+    cursor: pointer;
+  }
+  /* .back{
+margin-top: 40em;
+      background-color: blueviolet;
+     
+  background-size: cover;
+       width: 100%;
+   height: 25.5em;
+   margin-bottom: 0px;
+  } */
+  .hovery {
+    border: 2px solid white;
+  }
+  .hovery {
+    height: 70px;
+    float: right;
+    margin-left: 10em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+    padding: 1em;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -ms-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+}
+.hoveru {
+  height: 70px;
+  width: 150px;
+  float: right;
+  margin-left: 10em;
+  background-color: transparent;
+  transition: background-color 1s ease;
+  padding: 1em;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  -ms-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
+}
+
+  .hovery:hover {
+    background-color: blueviolet;
+    
+  }
+
+  .react_button {
+    text-decoration: none;
+  }
+
+  .btn_text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: color 0.1s ease;
+    -webkit-transition: color 0.1s ease;
+    -moz-transition: color 0.1s ease;
+    -ms-transition: color 0.1s ease;
+    -o-transition: color 0.1s ease;
+}
+
+  .hovery:hover .btn_text {
+    color: white; /* Optional: changes text color to white on hover */
+  }
+
+  .btn_text svg {
+    fill: currentColor;
+  }
+  .gace-img{
+    width: 30px;
+    margin-top: 120em;
+  }

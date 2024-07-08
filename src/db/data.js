@@ -30,6 +30,7 @@ const data = [
  Updated:" May 07, 2024",
 
     category: "Accounting, Design & Art, Music",
+     video:"https://www.youtube.com/embed/zfx5JN2wZQU?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fstudyhub.themewant.com%2Fcourses%2Fhow-to-market-yourself-as-coach-or-consultant-market%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstudyhub.themewant.com&amp;widgetid=1"
   },
 
   {
@@ -44,7 +45,8 @@ const data = [
     company: "Nike",
     color: "green",
     category: "	Business, Design & Art",
-    Updated:" May 07, 2024"
+    Updated:" May 07, 2024",
+     video:"https://www.youtube.com/embed/zfx5JN2wZQU?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fstudyhub.themewant.com%2Fcourses%2Fhow-to-market-yourself-as-coach-or-consultant-market%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstudyhub.themewant.com&amp;widgetid=1"
   },
   {
     id:4,
@@ -58,7 +60,8 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "	Development",
-    Updated: "Apr 30, 2024"
+    Updated: "Apr 30, 2024",
+     video:"https://www.youtube.com/embed/zfx5JN2wZQU?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fstudyhub.themewant.com%2Fcourses%2Fhow-to-market-yourself-as-coach-or-consultant-market%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstudyhub.themewant.com&amp;widgetid=1"
   },
   {
     id:5,
@@ -68,11 +71,12 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
      type:"Accounting",
-    newPrice: "200",
+    newPrice: "0",
     company: "Vans",
     color: "green",
     Updated: "Mar 21, 2024",
     category: "Accounting, Marketing",
+     video:"https://www.youtube.com/embed/zfx5JN2wZQU?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fstudyhub.themewant.com%2Fcourses%2Fhow-to-market-yourself-as-coach-or-consultant-market%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstudyhub.themewant.com&amp;widgetid=1"
   },
   {
     id:6,
@@ -88,6 +92,7 @@ const data = [
     color: "black",
     Updated: "Apr 30, 2024",
     category: "	Development",
+     video:"https://www.youtube.com/embed/zfx5JN2wZQU?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fstudyhub.themewant.com%2Fcourses%2Fhow-to-market-yourself-as-coach-or-consultant-market%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstudyhub.themewant.com&amp;widgetid=1"
 
   },
   

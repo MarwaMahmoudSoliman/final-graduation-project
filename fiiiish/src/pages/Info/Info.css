@@ -1,0 +1,18 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+  
+ /* ////// */
+ .rounded-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .icon {
+    width: 20%;
+    height: 10%;
+    margin-bottom: 20px;
+   text-align: center;
+    color: #8d30de; /* Adjust color as needed */
+  }
+  

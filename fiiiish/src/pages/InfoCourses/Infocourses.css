@@ -1,0 +1,93 @@
+/* *{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+} */
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-item-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.accordion-item-body {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  
+}
+
+.accordion-item-body-content {
+  padding: 10px;
+}
+
+.hi:hover {
+ background-color: #9b9b9b;
+}
+
+.course-content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-content-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.course-content-list-item-icon {
+  margin-right: 12px;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.color-muted {
+  color: #6c757d;
+}
+
+.icon-brand-youtube-bold::before {
+  content: '▶️'; /* Placeholder for YouTube icon */
+}
+
+.icon-eye-line::before {
+  content: '👁️'; /* Placeholder for eye icon */
+}
+.hoveru {
+    height: 70px;
+    width: 350px;
+    margin: auto;
+    float: right;
+    margin-right: 2em;
+    margin-top: 20px;
+    text-align: center;
+    background-color: transparent;
+    transition: background-color 1s ease;
+    padding: 1em;
+    border-radius: 2px;
+    background-color: rgb(23, 85, 230);
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -ms-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    
+}
+  
+    

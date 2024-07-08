@@ -14,7 +14,7 @@ import Icon from '@mdi/react';
 
 
 const photos = [
-  { id: 1, topic: "HTML", title: 'Mastering HTML: Structure and Semantics for Web Development', icon: mdiLanguageHtml5 },
+  { id: 1, topic: "HTML", title: 'Mastering HTML: Structure and Semantics for Web Development HTML Tutorial ... HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it',icon: mdiLanguageHtml5},
   { id: 2, topic: "CSS", title: 'Styling the Web: Advanced CSS Techniques and Best Practices CSS, or Cascading Style Sheets, is a stylesheet language used to describe the presentation of a document written in HTML or XML. It controls the layout, colors, fonts, and overall visual appearance of a web page ', icon: mdiLanguageCss3 },
   { id: 3, topic: "JavaScript", title: 'JavaScript Essentials: From Basics to Advanced Programming', icon: mdiLanguageJavascript },
   { id: 4, topic: "React", title: 'Building Dynamic UIs with React: A Comprehensive Guide', icon: mdiReact },

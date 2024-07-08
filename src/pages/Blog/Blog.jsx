@@ -18,45 +18,85 @@ import women from '../../utils/images/women.png';
 
 
 
-const blogs = [
-    {
-        id: 1,
-        img: [Blog1Img],
-        title: 'Blog 1',
-        description: 'Maximizing Your Learning Potential: A Guide to StudyHub '
-    },
-    {
-        id: 2,
-        img: [Blog2Img],
-        title: 'Blog 2',
-        description: 'Announcing the winners the 2023 Education com Story .'
-    },
-    {
-        id: 3,
-        img: [Blog3Img],
-        title: 'Blog 3',
-        description: 'Azure AI Fundamentals: How to Pass the AI-900 Exam '
-    },
-    {
-        id: 4,
-        img: [Blog4Img],
-        title: 'Blog 4',
-        description: 'We are praying for our community and platform. '
-    },
-    {
-        id: 5,
-        img: [Blog5Img],
-        title: 'Blog 5',
-        description: 'Here at First Baptist Cape Coral we believe!  '
-    },
-    {
-        id: 6,
-        img: [Blog6Img],
-        title: 'Blog 6',
-        description: 'Delivering What Consumers Really Value?  '
-    },
+// const blogs = [
+//     {
+//         id: 1,
+//         img: [Blog1Img],
+//         title: 'Blog 1',
+//         description: 'Maximizing Your Learning Potential: A Guide to StudyHub '
+//     },
+//     {
+//         id: 2,
+//         img: [Blog2Img],
+//         title: 'Blog 2',
+//         description: 'Announcing the winners the 2023 Education com Story .'
+//     },
+//     {
+//         id: 3,
+//         img: [Blog3Img],
+//         title: 'Blog 3',
+//         description: 'Azure AI Fundamentals: How to Pass the AI-900 Exam '
+//     },
+//     {
+//         id: 4,
+//         img: [Blog4Img],
+//         title: 'Blog 4',
+//         description: 'We are praying for our community and platform. '
+//     },
+//     {
+//         id: 5,
+//         img: [Blog5Img],
+//         title: 'Blog 5',
+//         description: 'Here at First Baptist Cape Coral we believe!  '
+//     },
+//     {
+//         id: 6,
+//         img: [Blog6Img],
+//         title: 'Blog 6',
+//         description: 'Delivering What Consumers Really Value?  '
+//     },
     
-];
+// ];
+const blogs = [
+  {
+      id: 1,
+      img: [Blog1Img],
+      title: 'Blog 1',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+  {
+      id: 2,
+      img: [Blog2Img],
+      title: 'Blog 2',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+  {
+      id: 3,
+      img: [Blog3Img],
+      title: 'Blog 3',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+  {
+      id: 4,
+      img: [Blog4Img],
+      title: 'Blog 4',
+      description: 'Lor adipisicing elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+  {
+      id: 5,
+      img: [Blog5Img],
+      title: 'Blog 5',
+      description: 'Lorem  elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+  {
+      id: 6,
+      img: [Blog6Img],
+      title: 'Blog 6',
+      description: 'Maximizing Loremelit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.'
+  },
+
+ 
+]
 
 function Blog() {
   return (
@@ -83,7 +123,7 @@ function Blog() {
     <div className="app" style={{color:"black"}}>
       <div className="post">
         <div className="post-header">
-        <img decoding="async" width="383" height="230" src="https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-35-1-383x230.jpg" class="attachment-studyhub-383-230 size-studyhub-383-230 wp-post-image" alt="Frame 35 (1)" srcset="https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-35-1-383x230.jpg 383w, https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-35-1-370x222.jpg 370w, https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-35-1-888x533.jpg 888w, https://studyhub.themewant.com/wp-content/uploads/2024/05/frame-35-1-858x515.jpg 858w" sizes="(max-width: 383px) 100vw, 383px"/>
+        <img decoding="async" width="383" height="230" src={blog.img}  sizes="(max-width: 383px) 100vw, 383px"/>
           <div className="post-details">
             <div className="post-date">
               <svg width="16" height="16" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
@@ -100,7 +140,7 @@ function Blog() {
           </div>
         </div>
         <div className="post-content">
-          <h4>Maximizing Your Learning Potential: A Guide to StudyHub</h4>
+          <h4>{blog.description}</h4>
           <div href="#story" className="post-link" style={{backgroundColor: "#543cdc",color:"white" ,textAlign:"center",width:"70px" ,padding:"10px" ,borderRadius:"10px 0 10px 0"}} >Story</div>
         </div>
       </div>

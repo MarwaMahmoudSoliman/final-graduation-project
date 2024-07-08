@@ -63,7 +63,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslationContext } from './Context/TranslationContext';
 
 import TranslationProvider from './Context/TranslationContext';
-import Certificate from './components/Certificate';
+
 function App() {
 
   
@@ -241,7 +241,7 @@ function App() {
   <Route path='/ML' element={<Moadmap/>} />
   <Route path='/fl' element={<Flutter/>} />
   <Route path='/nt' element={<Network/>} />
-  <Route path='/c' element={<Certificate/>} />
+
   </Routes>
         </TranslationProvider>
 

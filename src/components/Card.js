@@ -47,6 +47,9 @@ const Card = ({ course }) => {
           <div className="price">
             <del>{prevPrice}</del> {newPrice}
           </div>
+          <Link to ='/credit'>
+          <button style={{ backgroundColor: "purple", padding: "10px" }}>  Pay</button></Link>
+          
         </section>
       </div>
     </section>

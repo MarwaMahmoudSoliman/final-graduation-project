@@ -1,0 +1,320 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.about-page header {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(../../utils/images/about-header\ .jpg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+  }
+.img-about {
+  height: 70%;
+  width: 75%;
+  margin-top: 140px;
+}
+.pImg {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+  /* src/components/WhyChooseUs.css */
+
+.why-choose-us {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .stat-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+  }
+  .stat-item:hover {
+    background: #6c63ff;
+    color: #f9f9f9;
+    animation-duration: 3s;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .stat-item h3 {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  .stat-item p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  .stat-item p:hover{
+    color: #f9f9f9;
+  }
+  
+  .stat-item .fa-icon {
+    margin-bottom: 10px;
+  }
+  
+ /* src/components/OurTrainers.css */
+
+.our-trainers {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .our-trainers h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .our-trainers h2 span {
+    color: #6c63ff;
+  }
+  
+.pImg {
+    font-size: 19px;
+}
+
+  .trainers-list {
+    display: flex;
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap;
+    gap: 15px; /* Reduce the gap between the cards */
+  }
+  
+  .trainer {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    width: 290px; /* Increase the width */
+  }
+
+  .trainer img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .trainer h3 {
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+    color: #333;
+  }
+  
+  .trainer h4 {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #f39c12;
+  }
+  
+  .trainer p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+
+
+   /* src/components/Feedback.css */
+.feedback-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .feedback-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .feedback-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feedback-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .feedback-content {
+    text-align: left;
+  }
+  
+  .rating {
+    font-size: 1.5rem;
+    color: orange;
+  }
+  
+  .rating span {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .feedback-content p {
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .feedback-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .feedback-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .feedback-author div {
+    text-align: left;
+  }
+  
+  .feedback-author h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .feedback-author p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .feedback-buttons {
+    margin-top: 20px;
+  }
+  
+  .feedback-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+
+  .blog-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .blog-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .blog-meta span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .blog-meta svg {
+    margin-right: 5px;
+  }
+  
+  .blog-title {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #343a40;
+  }
+  
+  .blog-category {
+    margin-top: auto;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #6c63ff;
+    color: white;
+    text-align: center;
+    display: inline-block;
+  }
+.about-us-container {
+  height: 250px;
+  }
+.about-us-image {
+  width: 150px;
+  height: 150px;
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "React Weather App",
+    "description": "A weather application built with React.",
+    "github": "https://github.com/username/react-weather-app",
+    "video": "https://www.youtube.com/embed/Qk1wJfNJ4aI"
+  },
+  {
+    "id": 2,
+    "name": "E-commerce Website",
+    "description": "An e-commerce website built with Node.js and React.",
+    "github": "https://github.com/username/e-commerce-website",
+    "video": "https://www.youtube.com/embed/XKu_SEDAykw"
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Website",
+    "description": "A portfolio website built with HTML, CSS, and JavaScript.",
+    "github": "https://github.com/username/portfolio-website",
+    "video": "https://www.youtube.com/embed/YRD2VbZjQ00"
+  }
+]

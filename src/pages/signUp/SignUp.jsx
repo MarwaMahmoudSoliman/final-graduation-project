@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import img from '../../utils/images/IMG-20240622-WA0005-removebg-preview.png';
 import './SignUp.css';
@@ -34,20 +35,20 @@ export default function SignUp() {
     return (
         <div className="container">
             <div className='log-page'>
-        <div className="log-container">
-      <div className="log-content">
-        <h1>Sign Up</h1>
-        <p className="breadcrumb">Home {'>'} Sign UP </p>
-      </div>
-      <div className="log-image">
-        <img src={blogheader} alt="Books" />
-      </div>
-    </div>
-    </div>
+                <div className="log-container">
+                    <div className="log-content">
+                        <h1>Sign Up</h1>
+                        <p className="breadcrumb">Home {'>'} Sign UP </p>
+                    </div>
+                    <div className="log-image">
+                        <img src={blogheader} alt="Books" className="img-fluid" />
+                    </div>
+                </div>
+            </div>
 
             <div className="row m-5">
                 <div className="col-md-6">
-                    <img src={img} alt="" />
+                    <img src={img} alt="" className="img-fluid" />
                 </div>
                 <div className="col-md-6">
                     <form onSubmit={handleSignUp}>
@@ -55,13 +56,13 @@ export default function SignUp() {
                         <input 
                             type="text" 
                             id='name' 
-                            className='d-block w-100 mt-4' 
+                            className='form-control mb-3' 
                             placeholder='Full name' 
                         />
                         <input 
                             type="email" 
                             id='email' 
-                            className='d-block w-100 mt-4' 
+                            className='form-control mb-3' 
                             placeholder='Email' 
                             ref={emailRef}
                             value={email}
@@ -70,7 +71,7 @@ export default function SignUp() {
                         <input 
                             type="password" 
                             id='password' 
-                            className='d-block w-100 mt-4' 
+                            className='form-control mb-3' 
                             placeholder='Password' 
                             ref={passwordRef}
                             value={password}
@@ -79,31 +80,31 @@ export default function SignUp() {
                         <input 
                             type="password" 
                             id='repassword' 
-                            className='d-block w-100 mt-4' 
+                            className='form-control mb-3' 
                             placeholder='Confirm Password' 
                             value={repassword}
                             onChange={(e) => setRePassword(e.target.value)}
                         />
-                         {!passwordsMatch && (
+                        {!passwordsMatch && (
                             <p className="text-black mt-2 rounded-2 text-center bg-danger">Passwords do not match!</p>
                         )} 
-                        <hr /> <hr /> <hr /> <hr />
-                        <div className='d-flex ms-3'>
+                        <hr />
+                        <div className='form-check ms-3'>
                             <input 
                                 type='checkbox' 
-                                className='checkbox pt-5 me-1' 
+                                className='form-check-input pt-5 me-1' 
                                 checked={agreeToOffers}
                                 onChange={(e) => setAgreeToOffers(e.target.checked)}
                             /> 
-                            <p className='d-inline'>
+                            <label className='form-check-label'>
                                 Send me special offers, personalized recommendations, and learning tips.
-                            </p>
+                            </label>
                         </div>
-                        <button className='w-100 mb-3' type='submit'>Sign Up</button>
-                        <p className='ms-5'>
+                        <button className='btn btn-primary w-100 mb-3' type='submit'>Sign Up</button>
+                        <p className='ms-3'>
                             By signing up, you agree to our <span className='logwieam'>Terms of Use</span> and <span className='logwieam'>Privacy Policy</span>
                         </p>
-                        <h5 className='ms-5 text-center'>
+                        <h5 className='ms-3 text-center'>
                             Already have an account? <Link className='Link' to={'/login'}>Log in</Link>
                         </h5>
                     </form>

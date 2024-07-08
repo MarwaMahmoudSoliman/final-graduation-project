@@ -100,12 +100,12 @@ const InfoCourses = () => {
         </div>
         </div>
         <section style={{ height: "35em", padding: "60px" }}>
-        <div className='col-lg-6' style={{ height: "30em", width: "42em" }}>
-          <div className="video-container" style={{ height: "30em", width: "100px", backgroundColor: "red" }}>
+        <div className='col-lg-6' style={{ height: "30em", width: "72em" }}>
+          <div className="video-container" style={{ height: "10em", width: "55em",marginLeft:"-20px" }}>
             <iframe
               src={course.video}
               frameBorder="0"
-              style={{ height: "33em", width: "45em" }}
+              style={{ height: "100%", width: "55em" }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Video"
@@ -113,13 +113,13 @@ const InfoCourses = () => {
           </div>
           <div>
             <h3 style={{ fontSize: "25px", marginTop: "70px", fontWeight: "bold", fontFamily: "fantasy" }}>About Course</h3>
-            <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, t</p>
+            <p style={{width:"860px"}}>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, t</p>
             <span style={{ color: "grey", fontSize: "15px", fontWeight: "10px" }}> <FaPlus style={{ color: "grey", fontSize: "17px" }} /> Show More</span>
           </div>
           <div style={{ paddingBlock: "50px", paddingLeft: "25px", marginTop: "40px", border: ".1px solid grey" }}>
             <h3 style={{ fontSize: "25px", fontWeight: "bold", fontFamily: "fantasy" }}>What Will You Learn?</h3>
             <div className='d-flex flex-row' style={{ marginTop: "30px", paddingBottom: "40px" }}>
-              <div style={{ width: "45%", height: "20px", marginLeft: "5px" }}>
+              <div style={{ width: "25%", height: "20px", marginLeft: "5px" }}>
                 <IoCheckmarkOutline />
                 <span>Learn New Things</span><br /><br />
                 <IoCheckmarkOutline /><span>Skills Update</span>
@@ -136,12 +136,12 @@ const InfoCourses = () => {
           <div className=' py-4'>
             <h3 style={{ fontSize: "25px", fontWeight: "bold", marginBlock: "30px", fontFamily: "fantasy" }}>Course Content</h3>
           </div>
-          <div className='faq-section'>
-            <div className='container d-flex flex-column align-items-center' style={{ width: "300px" }}>
+          <div className='faq-section' style={{ marginLeft: "-30em" }}>
+            <div className='container d-flex flex-column align-items-center' style={{ width: "100px" }}>
               <Accordion defaultActiveKey="" flush style={{ width: "700px" ,marginBottom:"20px" }}>
                 <Accordion.Item eventKey='0'>
                   <Accordion.Header>
-                    <div className="lecture-title" style={{ marginRight: "28em" }}>Rock The Street</div>
+                    <div className="lecture-title" >Rock The Street</div>
                     <div className="lecture-counter">
                       <span>3 Lectures</span>
                       <span>. 40h:51min</span>
@@ -447,7 +447,7 @@ const InfoCourses = () => {
 
 
      
- <div className="col-lg-3" style={{ height:"28em" ,width:"28em",borderRadius:"2px",backgroundColor:"white",float:"right" ,marginLeft:"48em",marginTop:"-130em" ,padding:"30px 30px"}}> <div className="div">
+ <div className="col-lg-3" style={{ height:"28em" ,width:"28em",borderRadius:"2px",backgroundColor:"white",float:"right" ,marginLeft:"48em",marginTop:"-190em" ,padding:"30px 30px"}}> <div className="div">
   
  <div style={{clear:"both" }}>
  <div className='hoveru '>

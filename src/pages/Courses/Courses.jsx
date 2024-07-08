@@ -63,45 +63,48 @@ function Courses() {
   const result = filteredData(products, selectedCategory, query);
 
   return (
-    <div>
-      <div className='courses-page' style={{ height: "150em" }}>
-      <div className='blog-page'>
-        <div className="about-us-container">
+
+<div className='courses-page' style={{ minHeight: "150em" }}>
+  <div className='blog-page'>
+    <div className="about-us-container">
       <div className="about-us-content">
         <h1>Courses</h1>
-        <p className="breadcrumb">Home {'>'}Post {'>'} Courses</p>
+        <p className="breadcrumb">Home {'>'} Post {'>'} Courses</p>
       </div>
       <div className="about-us-image">
-        <img src={blogheader} alt="Books" />
+        <img src={blogheader} alt="Books" className="img-fluid" />
       </div>
     </div>
+  </div>
+
+  <div className='d-flex flex-wrap'>
+    <div className='side bg-white w-100 w-md-50 w-lg-25 p-3'>
+      <Sidebar handleChange={handleChange} />
+      <Navigation query={query} handleInputChange={handleInputChange} className='bg-white my-3' />
+      <Recommended handleClick={handleClick} className='bg-white my-3' />
+      <Products result={result} className='bg-white my-3' />
     </div>
-<div className='side bg-white w-5'>
-  <Sidebar handleChange={handleChange}  />
-        <Navigation query={query} handleInputChange={handleInputChange}  className='bg-white w-50' />
-        <Recommended handleClick={handleClick}   className='bg-white w-50'/>
-        
-        <Products result={result}  className='bg-white w-50'/></div>
-        <section className='s1 back '>
-        </section>
-        
-      </div>
-      <div className='py-5' style={{ background: "#573ede", position: 'relative' }}>
-      <div className="container">
-        <div className='row d-flex align-items-center justify-content-between'>
-          <div className='col-lg-6'>
-            <img src={women} className='img-fluid' alt="Person" /> 
-          </div>
-          <div className='col-lg-6'>
-            <h2 className='text-white'>Skills Certificate From the Studyhub</h2>
-            <Link to="/courses">
-              <button type='button' className='btn btn-light my-3' style={{background:"#543cdc"}}>View All Course &rarr;</button>
-            </Link>
-          </div>
+    
+    <section className='s1 back w-100'></section>
+  </div>
+  
+  <div className='py-5' style={{ background: "#573ede", position: 'relative' }}>
+    <div className="container">
+      <div className='row d-flex align-items-center justify-content-between'>
+        <div className='col-12 col-lg-6'>
+          <img src={women} className='img-fluid' alt="Person" />
+        </div>
+        <div className='col-12 col-lg-6'>
+          <h2 className='text-white'>Skills Certificate From the Studyhub</h2>
+          <Link to="/courses">
+            <button type='button' className='btn btn-light my-3' style={{background:"#543cdc"}}>View All Courses &rarr;</button>
+          </Link>
         </div>
       </div>
     </div>
-    </div>
+  </div>
+</div>
+
   );
 }
 
